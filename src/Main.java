@@ -1,8 +1,10 @@
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Первое задание");
         testFirstTask();
+        System.out.println("Второе задание");
         System.out.println("---------------------");
-        testSecindTask();
+        testSecondTask();
 
     }
 
@@ -12,36 +14,36 @@ public class Main {
 
     }
 
-    private static void testSecindTask() {
+    private static void testSecondTask() {
         System.out.println("Создаем телефонную книгу");
         PhoneBook phonebook = new PhoneBook();
 
         System.out.println("Наполняем справочник");
-        phonebook.add("Иванов", "223344");
-        phonebook.add("Иванов", "22334411");
-        phonebook.add("Петров", "22334499");
-        phonebook.add("Сидоров", "22334488");
-        phonebook.add("Иванов", "22334422");
+        phonebook.add("Рубинштейн", "123123");//Иванов
+        phonebook.add("Рубинштейн", "124124");//Иванов
+        phonebook.add("Клинтон", "22334499");//Петров
+        phonebook.add("Новгородцев", "22334488");//Сидоров
+        phonebook.add("Рубинштейн", "125125");//Иванов
         System.out.println("-----------------");
 
         System.out.println("Получаем номера");
-        System.out.println("Иванов");
-        System.out.println(phonebook.get("Иванов"));
-        System.out.println("Петров");
-        System.out.println(phonebook.get("Петров"));
-        System.out.println("Сидоров");
-        System.out.println(phonebook.get("Сидоров"));
+        System.out.println("Рубинштейн");//Иванов
+        System.out.println(phonebook.get("Рубинштейн"));//Иванов
+        System.out.println("Клинтон");//Петров
+        System.out.println(phonebook.get("Клинтон"));//Петров
+        System.out.println("Новогородцев");//Сидоров
+        System.out.println(phonebook.get("Новгородцев"));//Сидоров
         System.out.println("-----------------");
 
         System.out.println("Случай отсутствия записи");
-        System.out.println("Кузнецов");
-        System.out.println(phonebook.get("Кузнецов"));
+        System.out.println("Кузнецов");//Кузнецов
+        System.out.println(phonebook.get("Кузнецов"));//Кузнецов
         System.out.println("-----------------");
 
         System.out.println("Пробуем записать существующий номер");
-        phonebook.add("Иванов", "223344");
-        System.out.println("Иванов");
-        System.out.println(phonebook.get("Иванов"));
+        phonebook.add("Рубинштейн", "123123");//Иванов
+        System.out.println("Рубинштейн");//Иванов
+        System.out.println(phonebook.get("Рубинштейн"));//Иванов
     }
 }
 
